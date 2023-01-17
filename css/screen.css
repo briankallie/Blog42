@@ -1,0 +1,549 @@
+/* ========== Reset ========== */
+* {
+	border: none;
+	outline: none;
+}
+
+ul,
+ol {
+	list-style: none;
+    padding-left: 0;
+}
+
+/* ========== Clearfix ========== */
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/* ========== Root and Body ========== */
+html {
+	font-size: 62.5%;
+	line-height: 1.6;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+
+body {
+	font-size: 1.6em;
+	background-color: #97cbdc;
+	color: #000000;
+}
+
+/* ========== Media - All ========== */
+.container {
+	margin: 0 auto;
+	max-width: 960px;
+	width: 100%;
+    background-color: #dde8f0;
+}
+
+.column { 
+	margin-bottom: 1rem;
+    padding: 0 0.25rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+img[src*="thumbs"] {
+  float: right;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+header {
+    background-color: #018abd;
+    border: 1px solid #001b48;
+}
+
+header h1 {
+    font-size: 1.3em;
+    text-align: left;
+    padding-left: 0.2em;
+}
+
+header.column {
+    padding: 0;
+}
+
+h2, h3 {
+    color: #000000;
+    padding: 0.1em;
+}
+
+main section h2 span {
+    display: block;
+    font-size: 0.55em;
+    color: #004581;
+    border-bottom: 1px solid #969696;
+}
+
+main section ul.error {
+    list-style: disc;
+    padding-left: 1.75em;
+}
+
+main section div {
+    clear: both;
+}
+
+figcaption {
+    text-align: right;
+    background-color: #0189bd;
+    color: white;
+    padding-right: 0.35em;
+    position: relative;
+    top: -6px;
+}
+
+/* ========== Nav Mobile Menu ========== */
+nav a:link, nav a:visited {
+    display: block;
+    padding: 0.35em;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.25em;
+}
+
+nav a:focus, nav a:hover, nav a:active {
+    background-color: #001b48;
+}
+
+nav form {
+    margin: 0;
+}
+
+nav form input {
+    padding: 0.4em;
+    width: 100%;
+    font-size: 1.25em;
+}
+
+input#hamburger {
+  display: none;
+}
+
+label.menuicon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 9999;
+    top: 7px;
+    right: 0;
+    cursor: pointer;
+}
+
+label.menuicon span:before,
+label.menuicon span,
+label.menuicon span:after {
+  height: 6px;
+  position: absolute;
+  content: '';
+}
+
+label.menuicon span:before {
+  width: 100%;
+  top: -10px;
+  background-color: white;
+}
+
+label.menuicon span {
+  width: 75%;
+  background-color: white;
+  top: 21px;
+}
+
+label.menuicon span:after {
+  width: 100%;
+  background-color: white;
+  top: 10px;
+}
+
+ul.menu {
+  overflow: hidden;
+  background-color: #004581;
+  width: 0;
+  left: 2%;
+  top: 48px;
+  position: fixed;
+  z-index: 9999;
+  white-space: nowrap;
+  box-shadow: 0px 4px 6px 0px rgba(34, 37, 48, 0.62);
+}
+
+#hamburger:checked ~ ul.menu {
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    top: 47px;
+}
+
+#hamburger:checked ~ label.menuicon span {
+    background-color: transparent;
+}
+
+#hamburger:checked ~ label.menuicon span:before,
+#hamburger:checked ~ label.menuicon span:after {
+  top: 0;
+}
+
+#hamburger:checked ~ label.menuicon span:before {
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+#hamburger:checked ~ label.menuicon span:after {
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+/* ========== Aside Styling ========== */
+aside ul {
+    list-style-type: none;
+}
+
+aside li {
+    margin: 5px 0;
+}
+
+aside a {
+    text-decoration: none;
+}
+
+aside a:link, aside a:visited {
+    transition: all 0.1s ease-in;
+    border-left: 1px solid black;
+    color: black;
+    font-size: 1.25em;
+    font-weight: 500;
+    padding: 0.25em;
+    display: block;
+
+}
+
+aside a:hover, aside a:focus {
+    border-left: 5px solid black;
+    color: white;
+    background-color: #001b48;
+}
+
+aside a:active {
+    border-left: 1px solid black;
+    background-color: #001b48;
+}
+
+/* ========== Main Link States ========== */
+a:link, a:visited {
+    color: #001b48;
+    font-weight: bold;
+}
+
+a:hover, a:focus {
+    color: #0189bd;
+}
+
+a:active {
+    color: #004581;
+}
+
+/* ========== Form controls ========== */
+form {
+    margin: 1em 0;
+}
+
+form fieldset {
+    border: 1px solid black;
+    background-color: #97cadc;
+}
+
+form legend {
+    padding: 0.35em;
+    background-color: #004581;
+    color: #ffffff;
+}
+
+p.error, p.success {
+    text-indent: 1em;
+}
+
+.error {
+    background: #faa080;
+}
+
+.success {
+    background: #dff0d8;
+}
+
+form input[type="text"], input[type="password"], input[type="email"], select, textarea {
+	display: block;
+	width: 100%;
+	padding: 0.35em;
+    margin-bottom: 1em;
+}
+
+textarea {
+    resize: none;
+}
+
+form label {
+    margin-top: 0.5em;
+}
+
+form label[for="txtareamessage"] {
+    display: block;
+}
+
+form input[type="submit"] {
+    margin: 1em 1em 0 0;
+    padding: 0.5em;
+    background-color: #004581;
+    color: #ffffff;
+    float: right;
+}
+
+form input[name="logout"] {
+    margin-bottom: 1em;
+}
+
+form#error_search fieldset {
+    background-color: #e0e0e0;
+    margin-bottom: 1em;
+}
+
+form#error_search input[type="submit"] {
+    float: none;
+}
+
+form#error_search label.hidden {
+    display: none;
+}
+
+main form #allowUpload, 
+main form .optional {
+    display: none;
+}
+
+/* ========== Table Styling ========== */
+table {
+    width: 100%;
+}
+
+table tbody th {
+    background-color: #004581;
+    color: white;
+}
+
+table tbody tr td {
+    text-align: center;
+    border: 1px solid #004581;
+}
+
+/* ========== Footer ========== */
+footer {
+    margin: 0;
+    clear: both;
+    height: 50px;
+    line-height:normal;
+    background-color: #018abd;
+    color: #ffffff;
+    border: 1px solid #001b48;
+}
+
+footer a:link, footer a:visited {
+    text-decoration: none;
+    color: #001b48;
+    font-weight: bold;
+}
+
+footer a:hover, footer a:focus {
+    color: #ffffff;
+}
+
+footer a:active {
+    color: #ffffff;
+}
+
+footer a[href^=http] {
+    margin: 0px 0px 0px 10px;
+    float: right;
+}
+
+/* ==========================================================================
+   Media: Tablet and Desktop
+   ========================================================================== */
+
+@media (min-width: 768px) {
+
+/* ========== Grid: Columns ========== */
+    .column {
+        float: left;
+        margin: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .column.full { width: 100%; }
+    .column.three-fourths {width: 75%; }
+    .column.two-thirds { width: 66.66%; }
+    .column.half { width: 50%; }
+    .column.third { width: 33.33%; }
+    .column.fourth { width: 25%; }
+    .column.float-right { float: right; }
+    .column.float-left { float: left; }
+	
+/* ========== Grid: Nested Columns ========== */
+	.column .column.half:first-child {
+		padding-left: 0;
+	}
+	
+	.column .column.half:last-child {
+		padding-right: 0;
+	}
+    
+/* ========== Header ========== */
+    header {
+        font-size: 2em;
+    }
+    
+/* ========== Navigation ========== */
+    nav.column {
+        padding: 0;
+    }
+
+    nav label.menuicon {
+        display: none;
+    }
+    
+    nav ul.menu {
+        display: flex;
+        position: relative;
+        transition: none;
+        width: auto;
+        left: auto;
+        top: auto;
+        margin: 0;
+    }
+    
+	nav ul.menu li {
+		flex: 1;
+		margin: 0;
+	}
+
+    nav form input {
+        height: 62px;
+        font-size: 1.2em;
+    }
+	
+	nav li a:link, nav li a:visited {
+		display: block;
+        text-align: center;
+        line-height: 50px;
+        font-weight: 500;
+        font-size: 1.2em;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #004581;
+        border-right: none;
+	}
+    
+    nav li a:hover, nav li a:focus {
+        background-color: #001b48;
+    }
+    
+    nav li a:active {
+        background-color: #001b48;
+    }
+	
+	nav li:last-child {
+		margin-right: 0;
+        border-right: 1px solid #009203;
+	}
+
+    nav label {
+        display: none;
+    }
+
+    #hamburger:checked ~ ul.menu {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    aside {
+        float: right;
+        width: 33.33%;
+    }
+    
+    footer {
+        line-height: 50px;
+    }
+	
+/* ========== Form controls ========== */
+    form input[type=text], input[type="password"], input[type="email"], input[type="search"], textarea, select {
+        width: 100%;
+        display: inline-block;
+    }
+    
+    form label {
+        display: block;
+        min-width: 10em;
+    }
+    
+    form label#lblmessage {
+        display: inline-block;
+        vertical-align: top;
+        min-width: 10em;
+    }
+    
+    div#rdo-group {
+        display: inline-block;
+        padding-left: 0.5em;
+    }
+    
+    form label[for="radio-yes"], label[for="radio-no"] {
+        margin: 0 2em 1em 0;
+        min-width: 0;
+        display: inline-block;
+    }
+    
+    form input[type="submit"] {
+        float: left;
+    }
+    
+/* ========== Alignment Text and Images ========== */
+	
+	.center {
+		text-align: center;
+	}
+    
+    header h1 {
+        display: block;
+        text-align: center;
+    }
+	
+} /* /@media 768px */
+
+
+/* ==========================================================================
+   Debug: Desktop Only
+   ========================================================================== */
+
+@media (min-width: 1025px) {
+
+}
